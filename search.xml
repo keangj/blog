@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[test]]></title>
     <url>%2F2018%2F02%2F15%2Ftest%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[test 1 123 博客]]></content>
       <categories>
         <category>other</category>
         <category>test</category>
