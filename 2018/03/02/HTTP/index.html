@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="HTTP," />
 
 
 
@@ -87,10 +87,11 @@
 
 
 <meta name="description" content="TCP/IP通常使用的网络（包括互联网）是在TCP/IP协议族的基础上运作的。而HTTP属于它内部的一个子集。TCP/IP协议族里重要的一点就是分层。TCP/IP协议族按层分别为四层：应用层、传输层、网络层和数据链路层。  应用层决定了向用户提供应用服务时通信的活动。HTTP协议处于该层。 传输层对上层应用层，提供处于网络连接中的两台计算机之间的数据传输。 网络层用来处理在网路上流动的数据包。该层">
+<meta name="keywords" content="HTTP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTTP">
 <meta property="og:url" content="https://kjay.me/2018/03/02/HTTP/index.html">
-<meta property="og:site_name" content="Jay">
+<meta property="og:site_name" content="日中之光">
 <meta property="og:description" content="TCP/IP通常使用的网络（包括互联网）是在TCP/IP协议族的基础上运作的。而HTTP属于它内部的一个子集。TCP/IP协议族里重要的一点就是分层。TCP/IP协议族按层分别为四层：应用层、传输层、网络层和数据链路层。  应用层决定了向用户提供应用服务时通信的活动。HTTP协议处于该层。 传输层对上层应用层，提供处于网络连接中的两台计算机之间的数据传输。 网络层用来处理在网路上流动的数据包。该层">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://kjay.me/2018/03/02/HTTP/通信传输流.png">
@@ -100,7 +101,7 @@
 <meta property="og:image" content="https://kjay.me/2018/03/02/HTTP/各种协议与%20HTTP%20协议的关系.png">
 <meta property="og:image" content="https://kjay.me/2018/03/02/HTTP/绝对%20URI%20的格式.png">
 <meta property="og:image" content="https://kjay.me/2018/03/02/HTTP/状态码.png">
-<meta property="og:updated_time" content="2018-03-08T16:21:38.486Z">
+<meta property="og:updated_time" content="2018-03-09T10:17:40.640Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTTP">
 <meta name="twitter:description" content="TCP/IP通常使用的网络（包括互联网）是在TCP/IP协议族的基础上运作的。而HTTP属于它内部的一个子集。TCP/IP协议族里重要的一点就是分层。TCP/IP协议族按层分别为四层：应用层、传输层、网络层和数据链路层。  应用层决定了向用户提供应用服务时通信的活动。HTTP协议处于该层。 传输层对上层应用层，提供处于网络连接中的两台计算机之间的数据传输。 网络层用来处理在网路上流动的数据包。该层">
@@ -140,7 +141,7 @@
 
 
 
-  <title>HTTP | Jay</title>
+  <title>HTTP | 日中之光</title>
   
 
 
@@ -180,7 +181,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Jay</span>
+        <span class="site-title">日中之光</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -330,7 +331,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jay">
+      <meta itemprop="name" content="日中之光">
     </span>
 
     
@@ -403,7 +404,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  4,973
+                  5,537
                 </span>
               
 
@@ -419,7 +420,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  18
+                  20
                 </span>
               
             </div>
@@ -464,6 +465,195 @@
 <p>响应报文由协议版本、状态码、用以解释状态码的原因短语、可选的响应首部字段以及实体主体构成。<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 状态行</span></span><br><span class="line"><span class="comment">//协议版本 状态码 状态码的原因短语</span></span><br><span class="line">HTTP/<span class="number">1.1</span> <span class="number">200</span> OK</span><br><span class="line"><span class="comment">// 响应首部字段</span></span><br><span class="line"><span class="string">Date:</span> Thu, <span class="number">08</span> Mar <span class="number">2018</span> <span class="number">07</span>:<span class="number">33</span>:<span class="number">56</span> GMT</span><br><span class="line"><span class="string">Connection:</span> Keep-Alive</span><br><span class="line">Content-<span class="string">Encoding:</span> gzip</span><br><span class="line">Content-<span class="string">Type:</span> text/html; charset=utf<span class="number">-8</span></span><br><span class="line"><span class="comment">// 主体</span></span><br><span class="line">&lt;html&gt;</span><br><span class="line">···</span><br></pre></td></tr></table></figure></p>
 <p>当客户端请求访问资源而发送请求时，URI需要将作为请求报文中的请求URI包含在内。<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// URI为完整的请求URI</span></span><br><span class="line">GET <span class="string">http:</span><span class="comment">//baidu.com/index.htm HTTP/1.1</span></span><br><span class="line"><span class="comment">// 在首部字段Host中写明网络域名或IP地址</span></span><br><span class="line">GET <span class="regexp">/index.htm HTTP/</span><span class="number">1.1</span></span><br><span class="line"><span class="string">Host:</span> baidu.com</span><br></pre></td></tr></table></figure></p>
 <p>如果不是访问特定资源而是对服务器本身发起请求，可以用一个<code>*</code>来代替请求URI<br><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">OPTIONS</span> <span class="string">*</span> HTTP/1.1</span><br></pre></td></tr></table></figure></p>
+<h5 id="首部字段"><a href="#首部字段" class="headerlink" title="首部字段"></a>首部字段</h5><p><strong>通用首部</strong>：客户端和服务器都可以实用的就是通用首部</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">首部</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Connection</td>
+<td style="text-align:center">客户端和服务器是否保持连接</td>
+</tr>
+<tr>
+<td style="text-align:center">Date</td>
+<td style="text-align:center">日期，报文创建时间</td>
+</tr>
+<tr>
+<td style="text-align:center">Update</td>
+<td style="text-align:center">给出了发送端可能想要升级使用新版本或协议</td>
+</tr>
+<tr>
+<td style="text-align:center">Via</td>
+<td style="text-align:center">显示了报文经过的中间节点（代理、网关）</td>
+</tr>
+<tr>
+<td style="text-align:center">Trailer</td>
+<td style="text-align:center">如果报文采用分块传输编码方式，可以利用这个首部列出位于报文trailer部分的首部集合</td>
+</tr>
+<tr>
+<td style="text-align:center">Trailer-Encoding</td>
+<td style="text-align:center">告诉接收端对报文采用什么编码格式</td>
+</tr>
+<tr>
+<td style="text-align:center">Cache-Control</td>
+<td style="text-align:center">随报文传送缓存指示</td>
+</tr>
+<tr>
+<td style="text-align:center">Pragma</td>
+<td style="text-align:center">早期的随报文传送指示方式</td>
+</tr>
+</tbody>
+</table>
+<p><strong>请求首部</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">首部</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Client-IP</td>
+<td style="text-align:center">客户端IP</td>
+</tr>
+<tr>
+<td style="text-align:center">From</td>
+<td style="text-align:center">客户端邮件地址</td>
+</tr>
+<tr>
+<td style="text-align:center">Host</td>
+<td style="text-align:center">接收请求的服务器的主机名和端口号</td>
+</tr>
+<tr>
+<td style="text-align:center">Referer</td>
+<td style="text-align:center">提供了包含当前请求URI的文档的URL，告诉服务器自己来源</td>
+</tr>
+<tr>
+<td style="text-align:center">User—Agent</td>
+<td style="text-align:center">发起请求的客户端应用程序</td>
+</tr>
+<tr>
+<td style="text-align:center">Accept</td>
+<td style="text-align:center">告诉服务器能够发送那些媒体类型</td>
+</tr>
+<tr>
+<td style="text-align:center">Accept-Charset</td>
+<td style="text-align:center">告诉服务器能够发送那些字符集</td>
+</tr>
+<tr>
+<td style="text-align:center">Accept-Encoding</td>
+<td style="text-align:center">告诉服务器能够发送那些编码</td>
+</tr>
+<tr>
+<td style="text-align:center">Accept-Language</td>
+<td style="text-align:center">告诉服务器能够发送那些语言</td>
+</tr>
+<tr>
+<td style="text-align:center">Expect</td>
+<td style="text-align:center">允许客户端列出请求所要求的服务器行为</td>
+</tr>
+<tr>
+<td style="text-align:center">If-Match</td>
+<td style="text-align:center">如果ETag和文档当前ETag匹配，就获取文档</td>
+</tr>
+<tr>
+<td style="text-align:center">If-Modified-Since</td>
+<td style="text-align:center">除非在某个指定日期之后修改过，否则限制这个请求</td>
+</tr>
+<tr>
+<td style="text-align:center">If-None-Match</td>
+<td style="text-align:center">如果ETag和当前文档ETag不符合，获取资源</td>
+</tr>
+<tr>
+<td style="text-align:center">If-Range</td>
+<td style="text-align:center">允许对文档否个范围内的条件请求</td>
+</tr>
+<tr>
+<td style="text-align:center">If-Unmodified-Since</td>
+<td style="text-align:center">在某个指定日期之后没有修改过，否则现在请求</td>
+</tr>
+<tr>
+<td style="text-align:center">Cookie</td>
+<td style="text-align:center">客户端字符串</td>
+</tr>
+</tbody>
+</table>
+<p><strong>响应首部</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">首部</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Age</td>
+<td style="text-align:center">响应持续时间</td>
+</tr>
+<tr>
+<td style="text-align:center">Server</td>
+<td style="text-align:center">服务器应用软件名称和版本</td>
+</tr>
+<tr>
+<td style="text-align:center">Allow</td>
+<td style="text-align:center">列出了可用的请求方法</td>
+</tr>
+<tr>
+<td style="text-align:center">Location</td>
+<td style="text-align:center">告诉客户端实在在哪里，用于定向</td>
+</tr>
+<tr>
+<td style="text-align:center">Content-Base</td>
+<td style="text-align:center">解析主体中相对URL的基础URL</td>
+</tr>
+<tr>
+<td style="text-align:center">Content-Encoding</td>
+<td style="text-align:center">主体编码格式</td>
+</tr>
+<tr>
+<td style="text-align:center">Content-Language</td>
+<td style="text-align:center">解析主体时适用的语言</td>
+</tr>
+<tr>
+<td style="text-align:center">Content-Length</td>
+<td style="text-align:center">主体的长度或尺寸</td>
+</tr>
+<tr>
+<td style="text-align:center">Content-Location</td>
+<td style="text-align:center">资源实际位置</td>
+</tr>
+<tr>
+<td style="text-align:center">Content-MD5</td>
+<td style="text-align:center">主体的MD5校验和</td>
+</tr>
+<tr>
+<td style="text-align:center">Content-Range</td>
+<td style="text-align:center">在整个资源中此实体部分的字节范围</td>
+</tr>
+<tr>
+<td style="text-align:center">Content-Type</td>
+<td style="text-align:center">主体的MIME</td>
+</tr>
+<tr>
+<td style="text-align:center">ETag</td>
+<td style="text-align:center">主体的实体标记</td>
+</tr>
+<tr>
+<td style="text-align:center">Expires</td>
+<td style="text-align:center">过期时间</td>
+</tr>
+<tr>
+<td style="text-align:center">Last-Modified</td>
+<td style="text-align:center">实体最后一次修改时间</td>
+</tr>
+</tbody>
+</table>
 <h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><ul>
 <li><code>GET</code>：获取资源<br>GET是最常用的方法，通常用于请求服务器发送某个资源。指定的资源经服务器端解析后返回响应内容。</li>
 <li><code>POST</code>：传输实体主体<br>POST用于想服务器发送数据，通常用来支持HTML的表单（input、select、textarea），表单中的数据会被发送到服务器</li>
@@ -577,6 +767,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HTTP/" rel="tag"><i class="fa fa-tag"></i> HTTP</a>
+          
+        </div>
       
 
       
@@ -705,7 +901,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -754,7 +950,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-IP"><span class="nav-number">1.</span> <span class="nav-text">TCP/IP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#IP协议"><span class="nav-number">1.1.</span> <span class="nav-text">IP协议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP协议"><span class="nav-number">1.2.</span> <span class="nav-text">TCP协议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DNS-服务"><span class="nav-number">1.3.</span> <span class="nav-text">DNS 服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#各种协议与-HTTP-协议的关系"><span class="nav-number">1.4.</span> <span class="nav-text">各种协议与 HTTP 协议的关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#URI-和-URL"><span class="nav-number">1.5.</span> <span class="nav-text">URI 和 URL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#URI-格式"><span class="nav-number">1.6.</span> <span class="nav-text">URI 格式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP"><span class="nav-number">2.</span> <span class="nav-text">HTTP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#报文"><span class="nav-number">2.1.</span> <span class="nav-text">报文</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法"><span class="nav-number">2.2.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#状态码"><span class="nav-number">2.3.</span> <span class="nav-text">状态码</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1XX"><span class="nav-number">2.3.1.</span> <span class="nav-text">1XX</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2XX成功"><span class="nav-number">2.3.2.</span> <span class="nav-text">2XX成功</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3XX重定向"><span class="nav-number">2.3.3.</span> <span class="nav-text">3XX重定向</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4XX客户端错误"><span class="nav-number">2.3.4.</span> <span class="nav-text">4XX客户端错误</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5XX服务器错误"><span class="nav-number">2.3.5.</span> <span class="nav-text">5XX服务器错误</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTPS"><span class="nav-number">3.</span> <span class="nav-text">HTTPS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Web的攻击技术"><span class="nav-number">4.</span> <span class="nav-text">Web的攻击技术</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-IP"><span class="nav-number">1.</span> <span class="nav-text">TCP/IP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#IP协议"><span class="nav-number">1.1.</span> <span class="nav-text">IP协议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP协议"><span class="nav-number">1.2.</span> <span class="nav-text">TCP协议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DNS-服务"><span class="nav-number">1.3.</span> <span class="nav-text">DNS 服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#各种协议与-HTTP-协议的关系"><span class="nav-number">1.4.</span> <span class="nav-text">各种协议与 HTTP 协议的关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#URI-和-URL"><span class="nav-number">1.5.</span> <span class="nav-text">URI 和 URL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#URI-格式"><span class="nav-number">1.6.</span> <span class="nav-text">URI 格式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP"><span class="nav-number">2.</span> <span class="nav-text">HTTP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#报文"><span class="nav-number">2.1.</span> <span class="nav-text">报文</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#首部字段"><span class="nav-number">2.1.1.</span> <span class="nav-text">首部字段</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法"><span class="nav-number">2.2.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#状态码"><span class="nav-number">2.3.</span> <span class="nav-text">状态码</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1XX"><span class="nav-number">2.3.1.</span> <span class="nav-text">1XX</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2XX成功"><span class="nav-number">2.3.2.</span> <span class="nav-text">2XX成功</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3XX重定向"><span class="nav-number">2.3.3.</span> <span class="nav-text">3XX重定向</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4XX客户端错误"><span class="nav-number">2.3.4.</span> <span class="nav-text">4XX客户端错误</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5XX服务器错误"><span class="nav-number">2.3.5.</span> <span class="nav-text">5XX服务器错误</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTPS"><span class="nav-number">3.</span> <span class="nav-text">HTTPS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Web的攻击技术"><span class="nav-number">4.</span> <span class="nav-text">Web的攻击技术</span></a></li></ol></div>
             
 
           </div>
@@ -789,7 +985,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">8.4k</span>
+    <span title="Site words total count">9.0k</span>
   
 </div>
 
