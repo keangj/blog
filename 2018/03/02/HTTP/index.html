@@ -101,7 +101,7 @@
 <meta property="og:image" content="https://kjay.me/2018/03/02/HTTP/各种协议与%20HTTP%20协议的关系.png">
 <meta property="og:image" content="https://kjay.me/2018/03/02/HTTP/绝对%20URI%20的格式.png">
 <meta property="og:image" content="https://kjay.me/2018/03/02/HTTP/状态码.png">
-<meta property="og:updated_time" content="2018-06-29T07:35:50.336Z">
+<meta property="og:updated_time" content="2018-08-02T12:14:25.349Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTTP">
 <meta name="twitter:description" content="TCP/IP通常使用的网络（包括互联网）是在 TCP/IP 协议族的基础上运作的。而 HTTP 属于它内部的一个子集。TCP/IP 协议族里重要的一点就是分层。TCP/IP 协议族按层分别为四层：应用层、传输层、网络层和数据链路层。  应用层决定了向用户提供应用服务时通信的活动。HTTP 协议处于该层。 传输层对上层应用层，提供处于网络连接中的两台计算机之间的数据传输。 网络层用来处理在网路上流动">
@@ -404,7 +404,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  5,566
+                  5,918
                 </span>
               
 
@@ -420,7 +420,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  20
+                  22
                 </span>
               
             </div>
@@ -660,14 +660,15 @@
 </tbody>
 </table>
 <h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><ul>
-<li><code>GET</code>：获取资源<br>GET 是最常用的方法，通常用于请求服务器发送某个资源。指定的资源经服务器端解析后返回响应内容。</li>
+<li><code>GET</code>：获取资源<br>GET 是最常用的方法，通常用于请求服务器发送某个资源。指定的资源经服务器端解析后返回响应内容。使用 GET 的请求应该只用于获取数据。该方法是幂等（调用一次与连续调用多次是等价的）的，参数以明文传递。</li>
 <li><code>POST</code>：传输实体主体<br>POST 用于想服务器发送数据，通常用来支持 HTML 的表单（input、select、textarea），表单中的数据会被发送到服务器</li>
-<li><code>PUT</code>：传输文件<br>和 GET 从服务器获取资源相反，PUT 用于想服务器写入资源。PUT 的语义就是让服务器用请求的主体部分创建一个请求 URL 命名的文档，如果存在就替换</li>
-<li><code>HEAD</code>：获得报文首部<br>HEAD 方法和 GET 方法一样，只是不返回报文主体部分。用于确认 URI 的有效性及资源更新的日期时间等。</li>
-<li><code>DELETE</code>：删除文件<br>DELETE 方法按请求 URI 删除指定的资源，是与 PUT 相反的方法。</li>
+<li><code>PUT</code>：传输文件<br>和 GET 从服务器获取资源相反，PUT 用于想服务器写入资源。PUT 的语义就是让服务器用请求的主体部分创建一个请求 URL 命名的文档，如果存在就替换（对资源进行整体覆盖）。该方法是幂等的。</li>
+<li><code>HEAD</code>：获得报文首部<br>HEAD 方法和 GET 方法一样，只是不返回报文主体部分。用于确认 URI 的有效性及资源更新的日期时间等。该方法是幂等的。</li>
+<li><code>DELETE</code>：删除文件<br>DELETE 方法按请求 URI 删除指定的资源，是与 PUT 相反的方法。该方法是幂等的。</li>
 <li><code>OPTIONS</code>：询问支持的方法<br>OPTIONS 方法用于请求 web 服务器告知其支持的各种功能</li>
 <li><code>TRACE</code>：追踪路径<br>TRACE 方法是让 web 服务器端将之前的请求通信返回给客户端的方法。<br>客户端发送一个请求的时候，这个请求可能会穿过防火墙、代理、网关和一些其它应用程序，没个中间节点都可能修改 HTTP 请求，TRACE 方法允许客户端在最终请求发往服务器的时候，看看它变成了什么样子<br>TRACE 请求会在目的服务器端发送一个“闭环”诊断，行程最后一站服务器会弹回一条 TRACE 响应，并在响应主题中携带它收到的原始请求报文</li>
 <li><code>CONNECT</code>：要求用隧道协议连接代理<br>CONNECT 方法要求在与代理服务器通信时建立隧道，实现用隧道协议进行 TCP 通信。</li>
+<li><code>PATCH</code>：用于对资源进行部分修改<br>该方法与POST请求类似是非幂等的。</li>
 </ul>
 <h4 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h4><p>状态码的职责是当客户端向服务器发送请求时，描述返回的请求结果。借助状态码，用户可以指定服务器端是正常处理了请求，还是出现了错误。<br>状态码如 <code>200 OK</code> ，以 3 位数字和原因短语组成。</p>
 <table>
@@ -758,7 +759,21 @@
 <li>505 HTTP Version Not Supported<br>服务器不支持请求中所指明的 HTTP 版本。（HTTP 1.1 新）<br><img src="状态码.png" alt=""> <a href="https://raw.githubusercontent.com/for-GET/http-decision-diagram/master/httpdd.png" target="_blank" rel="noopener">状态码</a></li>
 </ul>
 <hr>
-<h3 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h3><h3 id="Web-的攻击技术"><a href="#Web-的攻击技术" class="headerlink" title="Web 的攻击技术"></a>Web 的攻击技术</h3>
+<h3 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h3><p>HTTP存在以下问题，通信内容在所有的通信线路上都有可能遭到窥视。</p>
+<ul>
+<li>通信使用铭文（不加密），内容可能会被窃听。</li>
+<li>不验证通信放的身份，因此有可能遭遇伪装（不确认通信方，不论是谁发送过来的请求都会返回响应）。</li>
+<li><p>无法证明报文的完整性，所以又可能已遭篡改</p>
+<!-- HTTP协议的实现本身非常简单，不论是谁发送过来的请求都会返回响应，因此不确认通信方，会存在以下各种隐患。
+- 无法确认请求发送至目标的web服务器是否是按真实意图返回响应的那台服务器。有可能是已伪装的web服务器。
+- 无法确认响应返回到的客户端是否是按照真实意图接收响应的那个客户端。有可能是已伪装的客户端。
+- 无法确认正在通信的对方是否具备访问权限。因为某些web服务器上保存着重要的信息，只想发给特定用户通信的权限。
+- 无法判定请求是来自何方、出自谁手。
+- 即使是无意义的请求也会照单全收。无法阻止海量请求下的DoS攻击（Denial of Service，拒绝服务攻击） -->
+<p>为解决这些问题需要在HTTP上再加入加密处理和认证等机制。我们把添加了加密及认证机制的HTTP称之为HTTPS（HTTP Secure）。<br>HTTPS并非是应用层的一种新协议。只是HTTP通信接口部分用SSL（Secure Socket Layer）和TLS（Transport Layer Security）协议代替而已。<br>通常，HTTP直接和TCP通信。当使用SSL时，则演变成先和SSL通信，再由SSL和TCP通信了。<br>SSL是独立于HTTP的协议，所以不只是HTTP协议，其他运行在应用层的协议均可配合SSL协议使用。</p>
+</li>
+</ul>
+<h3 id="Web-的攻击技术"><a href="#Web-的攻击技术" class="headerlink" title="Web 的攻击技术"></a>Web 的攻击技术</h3>
       
     </div>
     
@@ -994,7 +1009,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">12.5k</span>
+    <span title="Site words total count">12.9k</span>
   
 </div>
 
