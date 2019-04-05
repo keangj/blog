@@ -86,13 +86,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="日常札记">
-<meta property="og:url" content="https://kjay.me/categories/CSS/index.html">
+<meta name="description" content="mongoDB操作数据库 创建、切换  use 数据库名  切换数据库，如不存在就创建一个新的数据库。   1use test  删除  db.dropDatabase()  删除数据库  查看  show dbs  查看当前的数据库  操作集合 查看集合  show tables  查看当前数据库中的集合 创建集合  db.集合名.insert()  向集合里插入文档，如集合不存在创建一个集合">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MongoDB">
+<meta property="og:url" content="https://kjay.me/2019/04/05/MongoDB/index.html">
 <meta property="og:site_name" content="日常札记">
+<meta property="og:description" content="mongoDB操作数据库 创建、切换  use 数据库名  切换数据库，如不存在就创建一个新的数据库。   1use test  删除  db.dropDatabase()  删除数据库  查看  show dbs  查看当前的数据库  操作集合 查看集合  show tables  查看当前数据库中的集合 创建集合  db.集合名.insert()  向集合里插入文档，如集合不存在创建一个集合">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-05T12:44:06.506Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="日常札记">
+<meta name="twitter:title" content="MongoDB">
+<meta name="twitter:description" content="mongoDB操作数据库 创建、切换  use 数据库名  切换数据库，如不存在就创建一个新的数据库。   1use test  删除  db.dropDatabase()  删除数据库  查看  show dbs  查看当前的数据库  操作集合 查看集合  show tables  查看当前数据库中的集合 创建集合  db.集合名.insert()  向集合里插入文档，如集合不存在创建一个集合">
 
 
 
@@ -122,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https://kjay.me/categories/CSS/"/>
+  <link rel="canonical" href="https://kjay.me/2019/04/05/MongoDB/"/>
 
 
 
 
 
-  <title>分类: CSS | 日常札记</title>
+  <title>MongoDB | 日常札记</title>
   
 
 
@@ -157,7 +161,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -295,55 +299,322 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>CSS<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://kjay.me/2019/04/05/MongoDB/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jay">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="日常札记">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/02/18/Media-Queries/" itemprop="url">
-              
-                <span itemprop="name">Media Queries</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">MongoDB</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-18T18:11:46+08:00"
-              content="2018-02-18" >
-          02-18
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-05T20:17:14+08:00">
+                2019-04-05
+              </time>
+            
 
-    </header>
-  </article>
+            
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-05T20:44:06+08:00">
+                2019-04-05
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/04/05/MongoDB/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/04/05/MongoDB/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/04/05/MongoDB/" class="leancloud_visitors" data-flag-title="MongoDB">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  427
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="mongoDB"><a href="#mongoDB" class="headerlink" title="mongoDB"></a>mongoDB</h1><h2 id="操作数据库"><a href="#操作数据库" class="headerlink" title="操作数据库"></a>操作数据库</h2><ul>
+<li><p>创建、切换<br>  <code>use 数据库名</code><br>  切换数据库，如不存在就创建一个新的数据库。</p>
+  <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除<br>  <code>db.dropDatabase()</code><br>  删除数据库</p>
+</li>
+<li>查看<br>  <code>show dbs</code><br>  查看当前的数据库</li>
+</ul>
+<h2 id="操作集合"><a href="#操作集合" class="headerlink" title="操作集合"></a>操作集合</h2><ul>
+<li>查看集合<br>  <code>show tables</code><br>  查看当前数据库中的集合</li>
+<li>创建集合<br>  <code>db.集合名.insert()</code><br>  向集合里插入文档，如集合不存在创建一个集合</li>
+<li>删除集合<br>  <code>db.集合名.drop()</code><br>  删除当前数据库中的集合</li>
+</ul>
+<h2 id="操作文档"><a href="#操作文档" class="headerlink" title="操作文档"></a>操作文档</h2><ul>
+<li>查看集合里的文档<br>  <code>db.集合名.find()</code><br>  查看集合中的全部文档</li>
+<li><p>查看第一个文档<br>  <code>db.集合名.find</code></p>
+</li>
+<li><p>查看某个文档<br>  <code>db.集合名.find({查询条件})</code><br>  查询符合条件的文档<br>  <code>db.集合名.find({content: /jay/})</code><br>  查询 content 包含 ‘jay’ 的文档<br>  <code>db.集合名.find({content: /^jay/})</code><br>  查询 content 以 ‘jay’ 开头的文档<br>  <code>db.集合名.find({content: /jay$/})</code><br>  查询 content 以 ‘jay’ 结尾的文档</p>
+</li>
+<li><p>插入文档<br>  <code>db.集合名.insert(doc)</code></p>
+</li>
+<li>更新文档(覆盖)<br>  <code>db.集合名.update({查询条件}, {更新内容})</code><br>  更新符合条件的文档</li>
+<li>更新文档(添加)<br>  使用操作符 <code>$set</code><br>  <code>db.集合名.update({查询条件}, {操作符: {key: value}})</code><br>  修改某个 key 的 value，如不存在就添加</li>
+</ul>
+<h2 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h2><table>
+<thead>
+<tr>
+<th>条件操作符</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$gt(greater than)</td>
+<td>大于</td>
+</tr>
+<tr>
+<td>$gte(gt equal)</td>
+<td>大于等于</td>
+</tr>
+<tr>
+<td>$lt(less than)</td>
+<td>小于</td>
+</tr>
+<tr>
+<td>$lte(lt equal)</td>
+<td>小于等于</td>
+</tr>
+<tr>
+<td>$eq(equal)</td>
+<td>等于</td>
+</tr>
+<tr>
+<td>$ne(not eq)</td>
+<td>不等于</td>
+</tr>
+<tr>
+<td>$in</td>
+<td>包含</td>
+</tr>
+<tr>
+<td>$nin</td>
+<td>不包含</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>逻辑操作符</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$exists</td>
+<td>存在</td>
+</tr>
+<tr>
+<td>$not</td>
+<td>不存在</td>
+</tr>
+<tr>
+<td>$or</td>
+<td>或者</td>
+</tr>
+<tr>
+<td>$and</td>
+<td>和</td>
+</tr>
+<tr>
+<td>$mod</td>
+<td>求模</td>
+</tr>
+<tr>
+<td>$where</td>
+<td>位置</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>数组操作符</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$size</td>
+<td>匹配数组长度大小</td>
+</tr>
+<tr>
+<td>$all</td>
+<td>匹配数组字段中包含指定  Value 的文档</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/01/Vue组件通信/" rel="next" title="Vue组件通信">
+                <i class="fa fa-chevron-left"></i> Vue组件通信
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -351,6 +622,17 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
 
         </div>
         
@@ -371,8 +653,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -452,6 +743,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#mongoDB"><span class="nav-number">1.</span> <span class="nav-text">mongoDB</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#操作数据库"><span class="nav-number">1.1.</span> <span class="nav-text">操作数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作集合"><span class="nav-number">1.2.</span> <span class="nav-text">操作集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作文档"><span class="nav-number">1.3.</span> <span class="nav-text">操作文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作符"><span class="nav-number">1.4.</span> <span class="nav-text">操作符</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -615,6 +922,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -661,6 +972,30 @@
 
     
 
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'keangj',
+            repo: 'gitment-comments',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '3cdf4a17faece242c6fad90665a7eb29c3b51cac',
+            
+                client_id: 'd80d8f1b0d2533cfd2b3'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
     
 
 
