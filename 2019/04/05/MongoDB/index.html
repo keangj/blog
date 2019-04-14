@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="日常札记">
 <meta property="og:description" content="mongoDB操作数据库 创建、切换  use 数据库名  切换数据库，如不存在就创建一个新的数据库。   1use test  删除  db.dropDatabase()  删除数据库  查看  show dbs  查看当前的数据库  操作集合 查看集合  show tables  查看当前数据库中的集合 创建集合  db.集合名.insert()  向集合里插入文档，如集合不存在创建一个集合">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-05T12:44:06.506Z">
+<meta property="og:updated_time" content="2019-04-14T12:20:05.927Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MongoDB">
 <meta name="twitter:description" content="mongoDB操作数据库 创建、切换  use 数据库名  切换数据库，如不存在就创建一个新的数据库。   1use test  删除  db.dropDatabase()  删除数据库  查看  show dbs  查看当前的数据库  操作集合 查看集合  show tables  查看当前数据库中的集合 创建集合  db.集合名.insert()  向集合里插入文档，如集合不存在创建一个集合">
@@ -358,8 +358,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-05T20:44:06+08:00">
-                2019-04-05
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-14T20:20:05+08:00">
+                2019-04-14
               </time>
             
           </span>
@@ -407,7 +407,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  427
+                  446
                 </span>
               
 
@@ -466,7 +466,7 @@
 <li><p>插入文档<br>  <code>db.集合名.insert(doc)</code></p>
 </li>
 <li>更新文档(覆盖)<br>  <code>db.集合名.update({查询条件}, {更新内容})</code><br>  更新符合条件的文档</li>
-<li>更新文档(添加)<br>  使用操作符 <code>$set</code><br>  <code>db.集合名.update({查询条件}, {操作符: {key: value}})</code><br>  修改某个 key 的 value，如不存在就添加</li>
+<li>更新文档(添加)<br>  使用操作符 <code>$set</code><br>  <code>db.集合名.update({查询条件}, {操作符: {key: value}})</code><br>  修改某个 key 的 value，如不存在就添加<br>  <code>db.集合名.update({查询条件}, {$unset: {key: value}})</code><br>  删除某个 key 和 value</li>
 </ul>
 <h2 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h2><table>
 <thead>
